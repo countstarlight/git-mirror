@@ -1,5 +1,7 @@
 # git-mirror
 
+English | [简体中文](README_CN.md)
+
 Scripts for setting up and synchronizing **two-way** mirroring between Git
 repositories. There are instructions for one-way mirroring below as well.
 
@@ -195,3 +197,24 @@ trigger the `post-receive` hook in GitLab, so deleted branches will be
 resurrected during next update from origin. This problem has been filed as
 [bug #1156](https://gitlab.com/gitlab-org/gitlab-ce/issues/1156) in the GitLab
 issue tracker.
+
+## License
+
+[MIT](LICENSE)
+
+This project includes third party open source components:
+```
+─── scripts
+    ├── git-update-hook-for-protecting-branches-and-tags
+    ├── satellite
+    │   ├── git-post-receive-hook-for-updating-satellite
+    │   ├── setup-synchronize-git-repositories-with-satellite.sh
+    │   ├── synchronize-git-repositories-with-satellite.config
+    │   └── synchronize-git-repositories-with-satellite.sh
+    ├── simple
+    │   ├── setup-synchronize-git-mirror.sh
+    │   ├── synchronize-git-mirror.config
+    │   └── synchronize-git-mirror.sh
+    └── utils-lib.sh
+```
+Each of these components have their own license. Please see [licenses/LICENSE](licenses/LICENSE).
